@@ -1,12 +1,10 @@
-import mostrar from "./mostrar.js";
+import totalizar from "./totalizador.js";
 
-describe("Mostrar", () => {
-  it("Debe mostrar la cantidad de items ingresada", () => {
-    expect(mostrar(1)).toEqual(1);
+describe("Totalizar", () => {
+  it("Debe retornar el Precio Neto", () => {
+    expect(totalizar(1, 1)).toEqual({
+      precioNeto: 1
+    });
   });
-
-  it("Debe mostrar el precio del item ingresado", () => {
-    expect(mostrar(1, 10)).toEqual(10);
-  }); 
 });
 
