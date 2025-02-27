@@ -7,7 +7,15 @@
   </head>
   <body>
     <h1>Totalizador</h1>
-    
+    <form id="totalizar-form">
+      <label for="cantidad-items">Numero de Items</label>
+      <input type="number" id="cantidad-items" required /> <br> <br>
+
+      <input type="submit" value="Mostrar" id="mostrar-button" />
+    </form> <br> <br>
+    <div id="resultado-div">
+      <label id="info-cantidad"></label>
+    </div>
     <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>
