@@ -15,5 +15,11 @@ describe("Totalizar", () => {
     expect(resultado.precioNeto).toBe(1);
     expect(resultado.impuesto).toBe(0.08);
   });
+  
+  it("Debe calcular correctamente los impuestos para el estado de California (UT)", () => {
+    const resultado = totalizar(1, 1, "UT");
+    expect(resultado.precioNeto).toBe(1);
+    expect(resultado.impuesto).toBe(0.0665);
+  });
 });
 
