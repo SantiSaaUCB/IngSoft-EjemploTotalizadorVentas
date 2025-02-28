@@ -10,5 +10,10 @@ describe("Totalizar", () => {
     expect(resultado.precioNeto).toBe(1);
     expect(resultado.impuesto).toBe(0.0825);
   });
+  it("Debe calcular correctamente los impuestos para el estado de California (NV)", () => {
+    const resultado = totalizar(1, 1, "NV");
+    expect(resultado.precioNeto).toBe(1);
+    expect(resultado.impuesto).toBe(0.08);
+  });
 });
 
