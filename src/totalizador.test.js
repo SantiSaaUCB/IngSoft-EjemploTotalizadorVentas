@@ -25,5 +25,10 @@ describe("Totalizar", () => {
     expect(resultado.precioNeto).toBe(1);
     expect(resultado.impuesto).toBe(0.0625);
   });
+  it("Debe calcular correctamente los impuestos para el estado de California (AL)", () => {
+    const resultado = totalizar(1, 1, "AL");
+    expect(resultado.precioNeto).toBe(1);
+    expect(resultado.impuesto).toBe(0.04);
+  });
 });
 
