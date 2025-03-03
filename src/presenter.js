@@ -3,12 +3,13 @@ import totalizar from "./totalizador.js";
 const form = document.querySelector("#totalizar-form"); 
 const items = document.querySelector("#cantidad-items");
 const price = document.querySelector("#precio-item");
+const state = document.querySelector("#estado");
 const textCantidad = document.querySelector("#info-cantidadItems");
 const textPrecio = document.querySelector("#info-precioItem");
 const textPrecioNeto = document.querySelector("#info-precioNeto");
-const state = document.querySelector("#estado");
-const textEstado = document.querySelector("#info-estado")
+const textEstado = document.querySelector("#info-estado");
 const textPorcentajeImpuesto = document.querySelector("#info-porcentajeImpuestos");
+const textTotalConImpuesto = document.querySelector("#info-totalConImpuesto");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -23,6 +24,7 @@ form.addEventListener("submit", (event) => {
   textCantidad.textContent = `Cantidad de Items a Comprar: ${cantidadItems}`;
   textPrecio.textContent = `Precio por Item: ${precioItem}`;
   textPrecioNeto.textContent = `Precio Neto: ${resultado.precioNeto}`;
-  textEstado.textContent = `Codigo de Estado: ${estadoSeleccionado}`;
+  textEstado.textContent = `Estado Seleccionado: ${estadoSeleccionado}`;
   textPorcentajeImpuesto.textContent = `Impuestos a pagar en ${estadoNombre}: ${(resultado.impuesto * 100).toFixed(2)}%`;
+  textTotalConImpuesto.textContent = `Total con Impuesto: ${resultado.totalConImpuesto.toFixed(2)}`;
 });

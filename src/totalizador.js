@@ -11,9 +11,12 @@ function totalizar(cantidad_items, precio_item, codigo_estado) {
     default: impuesto = 0;
   }
 
+  const totalConImpuesto = precioNeto + (precioNeto * impuesto);
+
   return {
     precioNeto,
-    impuesto
+    impuesto,
+    totalConImpuesto
   };
 }
 
