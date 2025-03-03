@@ -10,6 +10,7 @@ const textPrecioNeto = document.querySelector("#info-precioNeto");
 const textEstado = document.querySelector("#info-estado");
 const textPorcentajeImpuesto = document.querySelector("#info-porcentajeImpuestos");
 const textTotalConImpuesto = document.querySelector("#info-totalConImpuesto");
+const textPorcentajeDescuento = document.querySelector("#info-porcentajeDescuento");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -26,5 +27,6 @@ form.addEventListener("submit", (event) => {
   textPrecioNeto.textContent = `Precio Neto: ${resultado.precioNeto}`;
   textEstado.textContent = `Estado Seleccionado: ${estadoSeleccionado}`;
   textPorcentajeImpuesto.textContent = `Impuestos a pagar en ${estadoNombre}: ${(resultado.impuesto * 100).toFixed(2)}%`;
-  textTotalConImpuesto.textContent = `Total con Impuesto: ${resultado.totalConImpuesto.toFixed(2)}`;
+  textTotalConImpuesto.textContent = `Precio con Impuesto: ${resultado.totalConImpuesto.toFixed(2)}`;
+  textPorcentajeDescuento.textContent = `Descuento aplicado para ${cantidadItems}: ${resultado.totalConImpuesto.toFixed(2)}`;
 });
