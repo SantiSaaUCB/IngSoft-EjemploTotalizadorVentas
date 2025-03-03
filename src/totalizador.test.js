@@ -75,5 +75,10 @@ describe("Totalizar", () => {
     expect(resultado.descuento).toBe(0.07);
     expect(resultado.totalConDescuento).toBeCloseTo(7000 * 1.0825 * 0.93, 2);
   });
+  it("Debe calcular correctamente el descuento para la cantidad >= 10000", () => {
+    const resultado = totalizar(10000, 1, "CA");
+    expect(resultado.descuento).toBe(0.1);
+    expect(resultado.totalConDescuento).toBeCloseTo(10000 * 1.0825 * 0.90, 2);
+  });
 });
 
