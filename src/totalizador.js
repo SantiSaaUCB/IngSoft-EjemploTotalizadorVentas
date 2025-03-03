@@ -14,7 +14,7 @@ function totalizar(cantidad_items, precio_item, codigo_estado) {
   const totalConImpuesto = precioNeto + (precioNeto * impuesto);
 
   switch (true) {
-    case totalConImpuesto >= 30000: descuento = 0.3; break;
+    case totalConImpuesto >= 30000: descuento = 0.15; break;
     case totalConImpuesto >= 10000: descuento = 0.1; break;
     case totalConImpuesto >= 7000: descuento = 0.07; break;
     case totalConImpuesto >= 3000: descuento = 0.05; break;
