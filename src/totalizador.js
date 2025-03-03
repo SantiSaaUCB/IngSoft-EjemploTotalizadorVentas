@@ -11,21 +11,22 @@ function totalizar(cantidad_items, precio_item, codigo_estado) {
     case "AL": impuesto = 0.04; break;
     default: impuesto = 0;
   }
+  const totalConImpuesto = precioNeto + (precioNeto * impuesto);
 
   switch (true) {
-    case cantidad_items >= 7000: descuento = 0.07; break;
-    case cantidad_items >= 3000: descuento = 0.05; break;
-    case cantidad_items >= 1000: descuento = 0.03; break;
+    case totalConImpuesto >= 7000: descuento = 0.07; break;
+    case totalConImpuesto >= 3000: descuento = 0.05; break;
+    case totalConImpuesto >= 1000: descuento = 0.03; break;
     default: descuento = 0;
   }
-
-  const totalConImpuesto = precioNeto + (precioNeto * impuesto);
+  const totalConDescuento = totalConImpuesto - (totalConImpuesto * descuento);
 
   return {
     precioNeto,
     impuesto,
     totalConImpuesto,
-    descuento
+    descuento,
+    totalConDescuento
   };
 }
 
