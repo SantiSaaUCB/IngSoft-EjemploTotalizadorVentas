@@ -13,6 +13,7 @@ function totalizar(cantidad_items, precio_item, codigo_estado) {
   }
 
   switch (true) {
+    case cantidad_items >= 7000: descuento = 0.07; break;
     case cantidad_items >= 3000: descuento = 0.05; break;
     case cantidad_items >= 1000: descuento = 0.03; break;
     default: descuento = 0;
